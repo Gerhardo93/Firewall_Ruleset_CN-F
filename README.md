@@ -33,7 +33,7 @@ iptables -t filter -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
 # The server is not allowed to make outgoing connections, except for the installation of security updates:
 # enkel http protocol voor security.debian.org toelaten; TCP 80 = http
 
-#Transfer files using TCP 80
+# Transfer files using TCP 80
 
 iptables -A OUTPUT -d security.debian.org --dport 80 -j ACCEPT
 
